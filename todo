@@ -1,0 +1,30 @@
+what i'm going to create ?
+
+1. Home page (contains 2 button register and login)
+2. Register page
+3. Login page
+4. Submit page to create new post
+5. Quotes page (contain all posts)
+6. Possibility to like quotes
+7. Logout process
+
+What will I use
+
+- Nodejs
+- Express
+- Passportjs
+- EJS
+- Bootstrap
+
+Package that I will use
+
+1. Express
+2. Express-session
+3. Mongoose
+4. Passport
+5. Passport-local
+6. Passport-local-mongoose
+7. Body-parser
+8. Dotenv
+9. Ejs
+10. Nodemon

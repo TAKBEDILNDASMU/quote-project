@@ -1,0 +1,51 @@
+<%- include('./partials/header') %> <%- include('./partials/navbar') %>
+
+<div class="row page_container">
+  <div class="col-md-10 m-auto">
+    <form>
+      <h3>Create quote.</h3>
+      <div class="mb-3">
+        <label for="create-quote" class="form-label">quote</label>
+        <textarea name="quote" id="create-quote" class="form-control" cols="30" row="10" required maxlength="100"></textarea>
+        <div id="emailHelp" class="form-text text-danger">Max 100 characters</div>
+      </div>
+      <div class="mb-3">
+        <label for="bgColor" class="form-label">Choose backgroud color for your quote</label>
+        <input type="color" class="form-control mb-2 form-control-color" id="bgColor" name="bgColor" value="#46244c" title="Choose your color" />
+        <button type="submit" class="btn purple__btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const quote = form.quote.value;
+    const bgColor = form.bgColor.value;
+    console.log(bgColor);
+
+    try {
+      const res = await fetch("/submit", {
+        method: "POST",
+        body: JSON.stringify({ quote, bgColor }),
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.success) {
+        location.assign("/quote");
+      }
+      if (!data.success) {
+        console.log(data.err);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
+</script>
+
+<%- include('./partials/footer') %>

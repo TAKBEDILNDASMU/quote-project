@@ -1,0 +1,82 @@
+body {
+  background-color: #eee;
+}
+
+a {
+  color: #fff !important;
+}
+
+textarea {
+  resize: none;
+}
+
+.sub-quote {
+  font-size: 2.5rem;
+}
+
+.page_container {
+  padding: 2% 15%;
+}
+
+.navbar__style {
+  background-color: #46244c;
+  position: sticky;
+  top: 0;
+}
+
+.quote-home-icon {
+  color: #46244c;
+  font-size: 3rem;
+}
+
+.register__btn {
+  border: 1px solid #46244c;
+  color: #46244c !important;
+}
+
+.purple__btn {
+  background-color: #46244c;
+  color: #fff;
+}
+
+.purple__btn:hover {
+  background-color: #62256c !important;
+  color: #fff !important;
+}
+
+.register__btn:hover {
+  border: 1px solid #62256c !important;
+}
+
+.no-quote {
+  min-height: calc(100vh - 120px);
+}
+
+.quote_content {
+  border: 5px solid #eee;
+  border-radius: 10px;
+  color: #fff;
+  -webkit-text-stroke: 0.5px #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.quote__text {
+  height: 220px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 991px) {
+  .page_container {
+    padding: 2% 7%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar_container {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}

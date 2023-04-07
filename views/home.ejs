@@ -1,0 +1,26 @@
+<%- include('./partials/header') %>
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar__style">
+  <div class="container-fluid d-flex justify-content-between navbar_container">
+    <a class="navbar-brand" href="/quote">Quotes</a>
+  </div>
+</nav>
+
+<!-- home -->
+<div class="container-fluid position-absolute top-50 start-50 translate-middle text-center">
+  <div class="home-msg">
+    <div class="mb-3 quote-home-icon">
+      <i class="fa-solid fa-quote-left"></i>
+      <sub class="fw-bold sub-quote">Quotes</sub>
+      <i class="fa-solid fa-quote-right"></i>
+    </div>
+
+    <p>Share what is in your mind now!</p>
+  </div>
+
+  <div class="register-login mt-2">
+    <a href="/register" class="btn btn-lg btn-light register__btn">Register</a>
+    <a href="/login" class="btn btn-lg btn-dark purple__btn ms-5">Login</a>
+  </div>
+</div>
+
+<%- include('./partials/footer') %>
